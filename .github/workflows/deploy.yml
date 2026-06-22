@@ -21,7 +21,7 @@ jobs:
 
     - name: Sync frontend to S3
       run: |
-        aws s3 sync ./frontend s3://newgithub-these --delete
+        aws s3 sync ./frontend s3://newgithub --delete
 
     - name: Invalidate CloudFront cache
       if: env.CLOUDFRONT_DIST_ID != ''
